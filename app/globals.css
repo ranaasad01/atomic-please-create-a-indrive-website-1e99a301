@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-primary: #C8F53F;
+  --color-dark: #1A1A1A;
+  --color-darker: #111111;
+  --color-card: #2D2D2D;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1A1A1A;
+  color: #ffffff;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Accent glow utility */
+.glow-lime {
+  box-shadow: 0 0 40px rgba(200, 245, 63, 0.25), 0 0 80px rgba(200, 245, 63, 0.1);
+}
+
+.glow-lime-text {
+  text-shadow: 0 0 30px rgba(200, 245, 63, 0.4);
+}
+
+/* Gradient mesh background */
+.mesh-bg {
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(200, 245, 63, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(200, 245, 63, 0.06) 0%, transparent 50%);
+}
+
+/* Card surface */
+.card-surface {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(8px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 245, 63, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 245, 63, 0.5);
+}
+
+/* Focus visible */
+*:focus-visible {
+  outline: 2px solid #C8F53F;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(200, 245, 63, 0.25);
+  color: #ffffff;
+}
