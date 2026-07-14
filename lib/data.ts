@@ -7,9 +7,15 @@ export interface NavLink {
 export const navLinks: NavLink[] = [
   { label: "Home", href: "/", type: "route" },
   { label: "How It Works", href: "#how-it-works", type: "anchor" },
-  { label: "Services", href: "#services", type: "anchor" },
+  { label: "Services", href: "/services", type: "route" },
   { label: "About", href: "/about", type: "route" },
   { label: "Drive With Us", href: "/driver-signup", type: "route" },
+  { label: "Get App", href: "/get-app", type: "route" },
+  { label: "Cities", href: "/cities", type: "route" },
+  { label: "Safety", href: "/safety", type: "route" },
+  { label: "Careers", href: "/careers", type: "route" },
+  { label: "Blog", href: "/blog", type: "route" },
+  { label: "Contact", href: "/contact", type: "route" },
 ];
 
 export const BRAND = {

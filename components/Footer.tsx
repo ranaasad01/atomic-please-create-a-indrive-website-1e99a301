@@ -10,15 +10,15 @@ import { useTranslations } from "next-intl";
 const footerLinks = {
   company: [
     { label: "footer.about", href: "/about", type: "route" },
-    { label: "footer.careers", href: "#", type: "route" },
+    { label: "footer.careers", href: "/careers", type: "route" },
     { label: "footer.press", href: "#", type: "route" },
-    { label: "footer.blog", href: "#", type: "route" },
+    { label: "footer.blog", href: "/blog", type: "route" },
   ],
   riders: [
     { label: "footer.how_it_works", href: "#how-it-works", type: "anchor" },
-    { label: "footer.safety", href: "#", type: "route" },
-    { label: "footer.cities", href: "#cities", type: "anchor" },
-    { label: "footer.app_download", href: "#", type: "route" },
+    { label: "footer.safety", href: "/safety", type: "route" },
+    { label: "footer.cities", href: "/cities", type: "route" },
+    { label: "footer.app_download", href: "/get-app", type: "route" },
   ],
   drivers: [
     { label: "footer.drive_with_us", href: "/driver-signup", type: "route" },
@@ -98,12 +98,22 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={getLinkHref(link.href, link.type)}
-                    className="text-white/50 hover:text-white text-sm transition-colors"
-                  >
-                    {t(link.label)}
-                  </Link>
+                  {link.type === "route" ? (
+                    <Link
+                      href={link.href}
+                      className="text-white/50 hover:text-[#C8F53F] text-sm transition-colors duration-200"
+                    >
+                      {t(link.label)}
+                    </Link>
+                  ) : (
+                    <Link
+                      href={getLinkHref(link.href, link.type)}
+                      onClick={(e) => handleAnchorClick(e, link.href)}
+                      className="text-white/50 hover:text-[#C8F53F] text-sm transition-colors duration-200"
+                    >
+                      {t(link.label)}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -117,17 +127,22 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {footerLinks.riders.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={getLinkHref(link.href, link.type)}
-                    onClick={
-                      link.type === "anchor"
-                        ? (e) => handleAnchorClick(e, link.href)
-                        : undefined
-                    }
-                    className="text-white/50 hover:text-white text-sm transition-colors"
-                  >
-                    {t(link.label)}
-                  </Link>
+                  {link.type === "route" ? (
+                    <Link
+                      href={link.href}
+                      className="text-white/50 hover:text-[#C8F53F] text-sm transition-colors duration-200"
+                    >
+                      {t(link.label)}
+                    </Link>
+                  ) : (
+                    <Link
+                      href={getLinkHref(link.href, link.type)}
+                      onClick={(e) => handleAnchorClick(e, link.href)}
+                      className="text-white/50 hover:text-[#C8F53F] text-sm transition-colors duration-200"
+                    >
+                      {t(link.label)}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -141,12 +156,22 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {footerLinks.drivers.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={getLinkHref(link.href, link.type)}
-                    className="text-white/50 hover:text-white text-sm transition-colors"
-                  >
-                    {t(link.label)}
-                  </Link>
+                  {link.type === "route" ? (
+                    <Link
+                      href={link.href}
+                      className="text-white/50 hover:text-[#C8F53F] text-sm transition-colors duration-200"
+                    >
+                      {t(link.label)}
+                    </Link>
+                  ) : (
+                    <Link
+                      href={getLinkHref(link.href, link.type)}
+                      onClick={(e) => handleAnchorClick(e, link.href)}
+                      className="text-white/50 hover:text-[#C8F53F] text-sm transition-colors duration-200"
+                    >
+                      {t(link.label)}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -156,7 +181,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/30 text-xs">
-            {t("footer.copyright", { year: 2024 })}
+            {t("footer.copyright", { year: new Date().getFullYear() })}
           </p>
           <div className="flex items-center gap-6">
             <Link href="#" className="text-white/30 hover:text-white/60 text-xs transition-colors">
