@@ -251,7 +251,7 @@ export default function SafetyPage() {
                       ))}
                     </div>
 
-                    <button className="mt-6 w-full py-3 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-sm font-semibold flex items-center justify-center gap-2 hover:bg-red-500/20 transition-colors">
+                    <button className="mt-6 w-full py-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-400 text-sm font-semibold flex items-center justify-center gap-2 hover:bg-rose-500/20 transition-colors">
                       <AlertTriangle size={16} />
                       Emergency SOS
                     </button>
@@ -305,7 +305,7 @@ export default function SafetyPage() {
                       <button className="py-2.5 rounded-xl bg-[#C8F53F]/10 border border-[#C8F53F]/20 text-[#C8F53F] text-xs font-semibold hover:bg-[#C8F53F]/20 transition-colors">
                         Call Support
                       </button>
-                      <button className="py-2.5 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold hover:bg-red-500/20 transition-colors">
+                      <button className="py-2.5 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-semibold hover:bg-rose-500/20 transition-colors">
                         SOS
                       </button>
                     </div>

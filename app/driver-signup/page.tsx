@@ -259,7 +259,7 @@ export default function DriverSignupPage() {
                         {t("driverSignup.hero.earningsCard.amount")}
                       </p>
                     </div>
-                    <div className="flex items-center gap-1 text-emerald-400 text-sm font-semibold">
+                    <div className="flex items-center gap-1 text-orange-400 text-sm font-semibold">
                       <span>↑</span>
                       <span>{t("driverSignup.hero.earningsCard.growth")}</span>
                     </div>

@@ -183,7 +183,7 @@ export default function DriverSignupPage() {
 
   const inputClass = (field: keyof FormErrors) =>
     `w-full bg-white/5 border rounded-xl px-4 py-3 text-white placeholder-white/30 text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#C8F53F]/50 focus:border-[#C8F53F]/50 ${
-      errors[field] ? "border-red-500/60" : "border-white/10 hover:border-white/20"
+      errors[field] ? "border-rose-500/60" : "border-white/10 hover:border-white/20"
     }`;
 
   if (submitted) {
@@ -497,7 +497,7 @@ export default function DriverSignupPage() {
                           className={inputClass("firstName")}
                         />
                         {errors.firstName && (
-                          <p className="text-red-400 text-xs mt-1">{errors.firstName}</p>
+                          <p className="text-rose-400 text-xs mt-1">{errors.firstName}</p>
                         )}
                       </div>
                       <div>
@@ -512,7 +512,7 @@ export default function DriverSignupPage() {
                           className={inputClass("lastName")}
                         />
                         {errors.lastName && (
-                          <p className="text-red-400 text-xs mt-1">{errors.lastName}</p>
+                          <p className="text-rose-400 text-xs mt-1">{errors.lastName}</p>
                         )}
                       </div>
                       <div>
@@ -533,7 +533,7 @@ export default function DriverSignupPage() {
                           />
                         </div>
                         {errors.email && (
-                          <p className="text-red-400 text-xs mt-1">{errors.email}</p>
+                          <p className="text-rose-400 text-xs mt-1">{errors.email}</p>
                         )}
                       </div>
                       <div>
@@ -554,7 +554,7 @@ export default function DriverSignupPage() {
                           />
                         </div>
                         {errors.phone && (
-                          <p className="text-red-400 text-xs mt-1">{errors.phone}</p>
+                          <p className="text-rose-400 text-xs mt-1">{errors.phone}</p>
                         )}
                       </div>
                       <div className="sm:col-span-2">
@@ -575,7 +575,7 @@ export default function DriverSignupPage() {
                           />
                         </div>
                         {errors.city && (
-                          <p className="text-red-400 text-xs mt-1">{errors.city}</p>
+                          <p className="text-rose-400 text-xs mt-1">{errors.city}</p>
                         )}
                       </div>
                     </div>
@@ -602,7 +602,7 @@ export default function DriverSignupPage() {
                           className={inputClass("vehicleMake")}
                         />
                         {errors.vehicleMake && (
-                          <p className="text-red-400 text-xs mt-1">{errors.vehicleMake}</p>
+                          <p className="text-rose-400 text-xs mt-1">{errors.vehicleMake}</p>
                         )}
                       </div>
                       <div>
@@ -617,7 +617,7 @@ export default function DriverSignupPage() {
                           className={inputClass("vehicleModel")}
                         />
                         {errors.vehicleModel && (
-                          <p className="text-red-400 text-xs mt-1">{errors.vehicleModel}</p>
+                          <p className="text-rose-400 text-xs mt-1">{errors.vehicleModel}</p>
                         )}
                       </div>
                       <div>
@@ -639,7 +639,7 @@ export default function DriverSignupPage() {
                           ))}
                         </select>
                         {errors.vehicleYear && (
-                          <p className="text-red-400 text-xs mt-1">{errors.vehicleYear}</p>
+                          <p className="text-rose-400 text-xs mt-1">{errors.vehicleYear}</p>
                         )}
                       </div>
                       <div>
@@ -660,7 +660,7 @@ export default function DriverSignupPage() {
                           />
                         </div>
                         {errors.licenseNumber && (
-                          <p className="text-red-400 text-xs mt-1">{errors.licenseNumber}</p>
+                          <p className="text-rose-400 text-xs mt-1">{errors.licenseNumber}</p>
                         )}
                       </div>
                     </div>
@@ -709,7 +709,7 @@ export default function DriverSignupPage() {
                       </span>
                     </label>
                     {errors.agreeTerms && (
-                      <p className="text-red-400 text-xs mt-2 ml-8">{errors.agreeTerms}</p>
+                      <p className="text-rose-400 text-xs mt-2 ml-8">{errors.agreeTerms}</p>
                     )}
                   </div>
 
